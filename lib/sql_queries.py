@@ -1,18 +1,40 @@
+# Select all female bears' names and ages
 select_all_female_bears_return_name_and_age = """
-    Write your SQL query here
+    SELECT
+        name,
+        age
+    FROM bears
+    WHERE sex = 'F';
 """
 
-select_all_bears_names_and_orders_in_alphabetical_order = """
-    Write your SQL query here
+# Select the names of bears that are older than 5 years
+select_names_of_bears_older_than_5_years = """
+    SELECT
+        name
+    FROM bears
+    WHERE age > 5;
 """
 
-select_all_bears_names_and_ages_that_are_alive_and_order_youngest_to_oldest = """
-    Write your SQL query here
+# Select the colors of bears that are alive
+select_colors_of_alive_bears = """
+    SELECT
+        color
+    FROM bears
+    WHERE alive = 1;
 """
 
-select_oldest_bear_and_returns_name_and_age = """
-    Write your SQL query here
+# Select the names of bears that are brown and have a temperament of 'Friendly'
+select_names_of_friendly_brown_bears = """
+    SELECT
+        name
+    FROM bears
+    WHERE color = 'Brown' AND temperament = 'Friendly';
 """
-select_youngest_bear_and_returns_name_and_age = """
-    Write your SQL query here
+
+# Select the names of bears that are either 2 years old or have a temperament of 'Grumpy'
+select_names_of_bears_2_years_old_or_grumpy = """
+    SELECT
+        name
+    FROM bears
+    WHERE age = 2 OR temperament = 'Grumpy';
 """
